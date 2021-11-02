@@ -1,7 +1,7 @@
 Package.describe({
   git: 'https://github.com/chandonnet/Meteor-http-methods',
   name: 'fchandonnet:http-methods',
-  version: '0.0.33',
+  version: '0.0.35',
   summary: 'Adds HTTP.methods RESTful'
 });
 
@@ -19,13 +19,4 @@ Package.onUse(function(api) {
   api.addFiles('http.methods.client.api.js', 'client');
   api.addFiles('http.methods.server.api.js', 'server');
 
-});
-
-Package.onTest(function (api) {
-  api.use('cfs:http-methods', ['server']);
-  api.use('test-helpers', 'server');
-  api.use(['tinytest', 'underscore', 'ejson', 'ordered-dict',
-           'random', 'deps']);
-
-  api.addFiles('http.methods.tests.js', 'server');
 });
